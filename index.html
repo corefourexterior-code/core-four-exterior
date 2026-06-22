@@ -1,0 +1,1311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO Meta Tags -->
+  <title>Core-Four Exterior Services | Window Washing, Landscaping & More | Southeast Iowa</title>
+  <meta name="description" content="Core-Four Exterior Services offers window washing, landscaping, junk removal, and small demolition in Southeast Iowa. Honest work, fair pricing, free quotes. Call 319-528-8024." />
+  <meta name="keywords" content="exterior services Iowa, window washing Iowa, landscaping Southeast Iowa, junk removal Iowa, small demolition Iowa, yard cleanup Iowa" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Core-Four Exterior Services | Southeast Iowa" />
+  <meta property="og:description" content="Honest work, fair pricing, free quotes. Window washing, landscaping, junk removal & small demolition serving Southeast Iowa." />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* =====================
+       TOKENS
+    ===================== */
+    :root {
+      --green-dark:   #1C3A2B;
+      --green-mid:    #2A5440;
+      --green-light:  #3D7A5A;
+      --tan:          #C4A882;
+      --tan-light:    #E8DDD0;
+      --cream:        #F7F4EE;
+      --white:        #FFFFFF;
+      --charcoal:     #1A1A1A;
+      --gray:         #5A5A5A;
+      --gray-light:   #D4D4D4;
+
+      --font-display: 'Oswald', sans-serif;
+      --font-body:    'Inter', sans-serif;
+
+      --radius:       6px;
+      --shadow:       0 4px 24px rgba(0,0,0,0.10);
+      --transition:   0.2s ease;
+    }
+
+    /* =====================
+       RESET & BASE
+    ===================== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-body);
+      background: var(--cream);
+      color: var(--charcoal);
+      line-height: 1.6;
+      font-size: 16px;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+
+    /* =====================
+       NAV
+    ===================== */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--green-dark);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+    }
+    nav {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+    .nav-logo {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: 0.04em;
+      line-height: 1.2;
+    }
+    .nav-logo span { color: var(--tan); }
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-family: var(--font-display);
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.82);
+      transition: color var(--transition);
+    }
+    .nav-links a:hover { color: var(--tan); }
+    .nav-cta {
+      background: var(--tan);
+      color: var(--green-dark) !important;
+      padding: 8px 18px;
+      border-radius: var(--radius);
+      font-weight: 700 !important;
+    }
+    .nav-cta:hover { background: #d4b892 !important; color: var(--green-dark) !important; }
+
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+    }
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--white);
+      border-radius: 2px;
+      transition: var(--transition);
+    }
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      background: var(--green-dark);
+      padding: 16px 24px 24px;
+      gap: 4px;
+    }
+    .mobile-menu a {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.85);
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      transition: color var(--transition);
+    }
+    .mobile-menu a:hover { color: var(--tan); }
+    .mobile-menu.open { display: flex; }
+
+    /* =====================
+       HERO
+    ===================== */
+    #home {
+      background: var(--green-dark);
+      position: relative;
+      overflow: hidden;
+      min-height: 540px;
+      display: flex;
+      align-items: center;
+    }
+    /* Diagonal slash — the signature element */
+    #home::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 80px;
+      background: var(--cream);
+      clip-path: polygon(0 100%, 100% 0, 100% 100%);
+    }
+    .hero-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 80px 24px 100px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+    .hero-eyebrow {
+      font-family: var(--font-display);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--tan);
+      margin-bottom: 16px;
+    }
+    .hero-headline {
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 5vw, 3.6rem);
+      font-weight: 700;
+      line-height: 1.08;
+      color: var(--white);
+      margin-bottom: 20px;
+    }
+    .hero-headline em {
+      font-style: normal;
+      color: var(--tan);
+    }
+    .hero-sub {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.78);
+      margin-bottom: 32px;
+      max-width: 460px;
+      line-height: 1.7;
+    }
+    .hero-buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: var(--tan);
+      color: var(--green-dark);
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 14px 28px;
+      border-radius: var(--radius);
+      border: none;
+      cursor: pointer;
+      transition: background var(--transition), transform var(--transition);
+      display: inline-block;
+    }
+    .btn-primary:hover { background: #d4b892; transform: translateY(-1px); }
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 14px 28px;
+      border-radius: var(--radius);
+      border: 2px solid rgba(255,255,255,0.4);
+      cursor: pointer;
+      transition: border-color var(--transition), transform var(--transition);
+      display: inline-block;
+    }
+    .btn-outline:hover { border-color: var(--white); transform: translateY(-1px); }
+
+    /* Hero trust badges */
+    .hero-badges {
+      display: flex;
+      gap: 24px;
+      margin-top: 36px;
+      flex-wrap: wrap;
+    }
+    .badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.65);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .badge-icon {
+      width: 28px;
+      height: 28px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+    }
+
+    /* Hero quote card */
+    .hero-card {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 12px;
+      padding: 32px;
+      backdrop-filter: blur(6px);
+    }
+    .hero-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+    .hero-card p {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.72);
+      margin-bottom: 20px;
+      line-height: 1.65;
+    }
+    .hero-card .contact-line {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.95rem;
+      color: var(--tan);
+      font-weight: 600;
+    }
+    .contact-item a {
+      color: var(--tan);
+      transition: color var(--transition);
+    }
+    .contact-item a:hover { color: #d4b892; }
+
+    /* =====================
+       SECTION SHARED
+    ===================== */
+    section { padding: 80px 0; }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .section-label {
+      font-family: var(--font-display);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--green-light);
+      margin-bottom: 10px;
+    }
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      font-weight: 700;
+      line-height: 1.1;
+      color: var(--green-dark);
+      margin-bottom: 16px;
+    }
+    .section-sub {
+      font-size: 1rem;
+      color: var(--gray);
+      max-width: 560px;
+      line-height: 1.7;
+    }
+    .section-header { margin-bottom: 48px; }
+    hr.divider {
+      border: none;
+      border-top: 2px solid var(--tan-light);
+      margin: 0;
+    }
+
+    /* =====================
+       SERVICES
+    ===================== */
+    #services { background: var(--cream); }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+    }
+    .service-card {
+      background: var(--white);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.14);
+    }
+    .service-card-img {
+      width: 100%;
+      height: 180px;
+      background: var(--tan-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+    }
+    .service-card-body { padding: 20px 22px 24px; }
+    .service-card-body h3 {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--green-dark);
+      margin-bottom: 8px;
+      letter-spacing: 0.02em;
+    }
+    .service-card-body p {
+      font-size: 0.9rem;
+      color: var(--gray);
+      line-height: 1.65;
+    }
+    .service-tag {
+      display: inline-block;
+      margin-top: 12px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--green-light);
+    }
+
+    /* =====================
+       WHY US
+    ===================== */
+    #why-us { background: var(--green-dark); }
+    #why-us .section-label { color: var(--tan); }
+    #why-us .section-title { color: var(--white); }
+    #why-us .section-sub { color: rgba(255,255,255,0.65); }
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+    .why-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 10px;
+      padding: 28px 26px 30px;
+      transition: background var(--transition);
+    }
+    .why-card:hover { background: rgba(255,255,255,0.10); }
+    .why-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--tan);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      margin-bottom: 16px;
+    }
+    .why-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+    .why-card p {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.65;
+    }
+
+    /* =====================
+       SERVICE AREA
+    ===================== */
+    #service-area { background: var(--cream); }
+    .area-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+    .area-map {
+      background: var(--tan-light);
+      border-radius: 10px;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+      border: 2px solid var(--tan);
+    }
+    .area-list {
+      list-style: none;
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .area-list li {
+      background: var(--white);
+      border: 1px solid var(--gray-light);
+      border-radius: 20px;
+      padding: 5px 14px;
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: var(--green-dark);
+    }
+
+    /* =====================
+       ABOUT
+    ===================== */
+    #about { background: var(--white); }
+    .team-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      margin-top: 48px;
+    }
+    .team-card {
+      background: var(--cream);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    .team-card-img {
+      width: 100%;
+      height: 500px;
+      background: linear-gradient(135deg, var(--green-mid), var(--green-dark));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+    }
+    .team-card-body { padding: 24px 26px 28px; }
+    .team-card-body h3 {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--green-dark);
+      margin-bottom: 4px;
+    }
+    .team-role {
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--tan);
+      margin-bottom: 12px;
+    }
+    .team-card-body p {
+      font-size: 0.9rem;
+      color: var(--gray);
+      line-height: 1.7;
+    }
+
+    /* =====================
+       TESTIMONIALS
+    ===================== */
+    #testimonials { background: var(--cream); }
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+    .testimonial-card {
+      background: var(--white);
+      border-radius: 10px;
+      padding: 28px 26px;
+      box-shadow: var(--shadow);
+      position: relative;
+    }
+    .testimonial-card::before {
+      content: '"';
+      font-family: Georgia, serif;
+      font-size: 5rem;
+      line-height: 1;
+      color: var(--tan-light);
+      position: absolute;
+      top: 10px;
+      left: 20px;
+    }
+    .testimonial-stars {
+      color: #E5A31D;
+      font-size: 1rem;
+      margin-bottom: 14px;
+      position: relative;
+      z-index: 1;
+    }
+    .testimonial-text {
+      font-size: 0.95rem;
+      color: var(--gray);
+      line-height: 1.7;
+      margin-bottom: 18px;
+      position: relative;
+      z-index: 1;
+    }
+    .testimonial-author {
+      font-weight: 600;
+      font-size: 0.88rem;
+      color: var(--green-dark);
+    }
+    .testimonial-note {
+      font-size: 0.78rem;
+      color: var(--gray);
+      margin-top: 2px;
+    }
+    .testimonials-cta {
+      text-align: center;
+      margin-top: 40px;
+    }
+    .testimonials-cta p {
+      font-size: 0.9rem;
+      color: var(--gray);
+      margin-bottom: 14px;
+    }
+
+    /* =====================
+       FAQ
+    ===================== */
+    #faq { background: var(--white); }
+    .faq-list {
+      max-width: 720px;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      border: 1px solid var(--gray-light);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .faq-item {
+      border-bottom: 1px solid var(--gray-light);
+    }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 20px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      font-family: var(--font-body);
+      font-size: 0.98rem;
+      font-weight: 600;
+      color: var(--green-dark);
+      text-align: left;
+      transition: background var(--transition);
+    }
+    .faq-question:hover { background: var(--cream); }
+    .faq-chevron {
+      font-size: 1rem;
+      color: var(--tan);
+      transition: transform 0.25s ease;
+      flex-shrink: 0;
+      margin-left: 12px;
+    }
+    .faq-item.open .faq-chevron { transform: rotate(180deg); }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+      padding: 0 24px;
+    }
+    .faq-item.open .faq-answer {
+      max-height: 300px;
+      padding: 0 24px 20px;
+    }
+    .faq-answer p {
+      font-size: 0.92rem;
+      color: var(--gray);
+      line-height: 1.7;
+    }
+
+    /* =====================
+       QUOTE FORM
+    ===================== */
+    #contact { background: var(--green-dark); }
+    #contact .section-label { color: var(--tan); }
+    #contact .section-title { color: var(--white); }
+    #contact .section-sub { color: rgba(255,255,255,0.65); }
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 60px;
+      align-items: start;
+    }
+    .contact-info-item {
+      display: flex;
+      gap: 14px;
+      margin-bottom: 24px;
+      align-items: flex-start;
+    }
+    .contact-info-icon {
+      width: 42px;
+      height: 42px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+    .contact-info-text label {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--tan);
+      margin-bottom: 3px;
+    }
+    .contact-info-text a,
+    .contact-info-text span {
+      font-size: 0.98rem;
+      color: rgba(255,255,255,0.85);
+      font-weight: 500;
+    }
+    .contact-info-text a:hover { color: var(--tan); }
+    .contact-note {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.45);
+      margin-top: 4px;
+    }
+
+    /* Form */
+    .quote-form {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 36px 32px;
+    }
+    .quote-form h3 {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--green-dark);
+      margin-bottom: 6px;
+    }
+    .quote-form p {
+      font-size: 0.88rem;
+      color: var(--gray);
+      margin-bottom: 24px;
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      margin-bottom: 14px;
+    }
+    .form-row .form-group { margin-bottom: 0; }
+    .form-group label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--green-dark);
+      letter-spacing: 0.04em;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      padding: 10px 14px;
+      border: 1.5px solid var(--gray-light);
+      border-radius: var(--radius);
+      font-family: var(--font-body);
+      font-size: 0.93rem;
+      color: var(--charcoal);
+      background: var(--cream);
+      transition: border-color var(--transition);
+      outline: none;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--green-light);
+      background: var(--white);
+    }
+    .form-group textarea { resize: vertical; min-height: 90px; }
+    .form-submit {
+      width: 100%;
+      padding: 14px;
+      background: var(--green-dark);
+      color: var(--white);
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border: none;
+      border-radius: var(--radius);
+      cursor: pointer;
+      transition: background var(--transition);
+      margin-top: 6px;
+    }
+    .form-submit:hover { background: var(--green-mid); }
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 20px;
+      color: var(--green-dark);
+      font-weight: 600;
+    }
+
+    /* =====================
+       FOOTER
+    ===================== */
+    footer {
+      background: #111;
+      color: rgba(255,255,255,0.5);
+      padding: 36px 24px;
+      text-align: center;
+      font-size: 0.85rem;
+    }
+    footer strong { color: rgba(255,255,255,0.8); }
+    footer a { color: var(--tan); }
+    footer a:hover { color: #d4b892; }
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    /* =====================
+       RESPONSIVE
+    ===================== */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+
+      .hero-inner {
+        grid-template-columns: 1fr;
+        padding: 60px 24px 80px;
+      }
+      .hero-card { display: none; }
+      .hero-badges { gap: 16px; }
+
+      .area-inner { grid-template-columns: 1fr; }
+      .team-grid { grid-template-columns: 1fr; }
+      .contact-layout { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+
+      section { padding: 60px 0; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { transition: none !important; animation: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===================== NAV ===================== -->
+  <header>
+    <nav>
+      <div class="nav-logo">Core&#8209;Four <span>Exterior</span></div>
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#why-us">Why Us</a></li>
+        <li><a href="#service-area">Service Area</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact" class="nav-cta">Get a Quote</a></li>
+      </ul>
+      <button class="hamburger" aria-label="Open menu" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#services" onclick="toggleMenu()">Services</a>
+      <a href="#why-us" onclick="toggleMenu()">Why Us</a>
+      <a href="#service-area" onclick="toggleMenu()">Service Area</a>
+      <a href="#about" onclick="toggleMenu()">About</a>
+      <a href="#faq" onclick="toggleMenu()">FAQ</a>
+      <a href="#contact" onclick="toggleMenu()">Get a Free Quote</a>
+    </div>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <section id="home">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <p class="hero-eyebrow">Southeast Iowa's Exterior Crew</p>
+        <h1 class="hero-headline">Your property,<br><em>cleaned up.</em><br>Done right.</h1>
+        <p class="hero-sub">Core-Four delivers honest work, fair pricing, and zero surprises. From window washing to junk removal and everything in between, we handle it all.</p>
+        <div class="hero-buttons">
+          <a href="#contact" class="btn-primary">Get a Free Quote</a>
+          <a href="#services" class="btn-outline">See Our Services</a>
+        </div>
+        <div class="hero-badges">
+          <div class="badge"><div class="badge-icon">✓</div> Free Quotes</div>
+          <div class="badge"><div class="badge-icon">✓</div> No Hidden Fees</div>
+          <div class="badge"><div class="badge-icon">✓</div> Local Team</div>
+        </div>
+      </div>
+      <div class="hero-card">
+        <h3>Ready to get started?</h3>
+        <p>We serve Southeast Iowa and surrounding areas. Call or email us to schedule your free, no-pressure quote.</p>
+        <div class="contact-line">
+          <div class="contact-item">📞 <a href="tel:3195288024">319-528-8024</a></div>
+          <div class="contact-item">📞 <a href="tel:3193609185">319-360-9185</a></div>
+          <div class="contact-item">✉️ <a href="mailto:corefourexterior@gmail.com">corefourexterior@gmail.com</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- ===================== SERVICES ===================== -->
+  <section id="services">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">What We Do</p>
+        <h2 class="section-title">Our Services</h2>
+        <p class="section-sub">From a single window wash to a full yard overhaul, we take care of the outside so you don't have to.</p>
+      </div>
+      <div class="services-grid">
+
+        <div class="service-card">
+          <div class="service-card-img" style="padding:0; overflow:hidden;">
+  <img src="Window Result.jpeg" alt="Window washing result" style="width:100%; height:180px; object-fit:cover;" />
+</div>
+          <div class="service-card-body">
+            <h3>Window Washing</h3>
+            <p>We hand-scrub and wipe down every pane to avoid scratches, then clean the surrounding trim to remove built-up dirt and grime. Power washing siding is also available on request.</p>
+            <span class="service-tag">→ Residential &amp; Commercial</span>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card-img" style="padding:0; overflow:hidden;">
+  <img src="Landscaping Result.jpeg" alt="Landscaping result" style="width:100%; height:180px; object-fit:cover;" />
+</div>
+          <div class="service-card-body">
+            <h3>Landscaping</h3>
+            <p>Rock beds, flower beds, mulch, landscaping brick, weed removal, small tree removal, and general overgrowth cleanup. Whether you want a fresh install or a seasonal tidy-up, we've got you covered.</p>
+            <span class="service-tag">→ Installs &amp; Cleanups</span>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card-img" style="padding:0; overflow:hidden;">
+  <img src="Small Demo Result.jpeg" alt="Small Demo result" style="width:100%; height:180px; object-fit:cover;" />
+</div>
+          <div class="service-card-body">
+            <h3>Small Demolition</h3>
+            <p>We handle quick, efficient takedowns of sheds, small outbuildings, and other light structures. Safe, stress-free, and we haul away the debris so your yard is ready to go.</p>
+            <span class="service-tag">→ Sheds, Fences &amp; More</span>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card-img" style="padding:0; overflow:hidden;">
+  <img src="Junk Removal Result.jpg" alt="Junk Removal result" style="width:100%; height:180px; object-fit:cover;" />
+</div>
+          <div class="service-card-body">
+            <h3>Junk Removal</h3>
+            <p>Old furniture, broken appliances, and full garage cleanouts; we remove it all quickly and responsibly. You point to it, we haul it. Simple as that.</p>
+            <span class="service-tag">→ Haul-Aways &amp; Cleanouts</span>
+          </div>
+        </div>
+
+        <div class="service-card">
+  <div class="service-card-img" style="padding:0; overflow:hidden;">
+  <img src="Snow Removal Result.jpg" alt="Snow removal service" style="width:100%; height:180px; object-fit:cover;" />
+</div>
+  <div class="service-card-body">
+    <h3>Snow Removal</h3>
+    <p>Don't let winter slow you down. We handle driveways, walkways, and parking areas quickly and reliably. Available for one-time clears and recurring seasonal service.</p>
+    <span class="service-tag">→ Residential &amp; Commercial</span>
+  </div>
+</div>
+
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- ===================== WHY US ===================== -->
+  <section id="why-us">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Why Core-Four</p>
+        <h2 class="section-title">The way we think work should be done</h2>
+        <p class="section-sub">No corporate nonsense, no surprise fees. Just two guys who show up, do the work, and leave your property better than we found it.</p>
+      </div>
+      <div class="why-grid">
+
+        <div class="why-card">
+          <div class="why-icon">💵</div>
+          <h3>Honest, Affordable Pricing</h3>
+          <p>We charge by the job plus any equipment, removal, or supply costs and nothing else. We work as efficiently as possible to keep your bill low, and we'll never pad an invoice.</p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-icon">🤝</div>
+          <h3>Client-First, Every Time</h3>
+          <p>We never leave a job without giving you a chance to look it over. If something isn't right, we will fix it, no questions asked. Without happy clients, we don't have a business.</p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-icon">📋</div>
+          <h3>Free Quotes &amp; Clear Estimates</h3>
+          <p>You'll never pay a dime before the work is done. We give free quotes, accurate estimates, and simple invoices you can actually understand.</p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-icon">🌱</div>
+          <h3>Local &amp; Community-Focused</h3>
+          <p>We live and work in Southeast Iowa. Supporting our neighbors is the whole point for us. We're invested in keeping our community looking its best.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" style="border-color: rgba(255,255,255,0.08);" />
+
+  <!-- ===================== SERVICE AREA ===================== -->
+  <section id="service-area">
+    <div class="container">
+      <div class="area-inner">
+        <div>
+          <p class="section-label">Where We Work</p>
+          <h2 class="section-title">Proudly serving Southeast Iowa</h2>
+          <p class="section-sub">We're based in Southeast Iowa and serve the surrounding communities. Not sure if we cover your area? Just call, we will be happy to talk it through.</p>
+          <ul class="area-list">
+            <li>Southeast Iowa</li>
+            <li>Henry County</li>
+            <li>And surrounding areas</li>
+          </ul>
+          <br />
+          <a href="#contact" class="btn-primary" style="display:inline-block; margin-top:8px;">Check Your Area →</a>
+        </div>
+        <div class="area-map" style="padding:0; overflow:hidden; border-radius:10px;">
+  <img src="Henry County.jpg" alt="Core-Four Exterior Services coverage area in Eastern Iowa" style="width:100%; height: 100%; object-fit:cover; display:block;" />
+</div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- ===================== ABOUT ===================== -->
+  <section id="about">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Who We Are</p>
+        <h2 class="section-title">Meet the team</h2>
+        <p class="section-sub">We're a small crew of hardworking young men who take pride in every job. We grew up here, we work here, and we care about the work we put our name on.</p>
+      </div>
+      <div class="team-grid">
+
+        <div class="team-card">
+          <div class="team-card-img" style="padding:0;">
+  <img src="Carter.jpeg" alt="Carter Myers" style="width:100%; height:500px; object-fit:cover;" />
+</div>
+          <div class="team-card-body">
+            <h3>Carter Myers</h3>
+            <p class="team-role">Co-Founder · Landscaping &amp; Exterior Specialist</p>
+            <p>With three years of hands-on experience in landscaping and power washing — and a lifetime of outdoor work growing up on a farm — Carter brings practical knowledge and a genuine work ethic to every job. Years of football have reinforced his discipline and drive. When he's not working, you'll find him hunting, fishing, or spending time with family.</p>
+          </div>
+        </div>
+
+        <div class="team-card">
+          <div class="team-card-img" style="padding:0;">
+  <img src="Ajay.jpg" alt="Ajay Wagner" style="width:100%; height:500px; object-fit:cover;" />
+</div>
+          <div class="team-card-body">
+            <h3>Ajay Wagner</h3>
+            <p class="team-role">Co-Founder · Operations &amp; Client Relations</p>
+            <p>Ajay graduated as his Class of 2026 valedictorian and will continue his education at the University of Minnesota. Years of athletics have built his discipline and teamwork. Growing up with parents in education and healthcare gave him a deep respect for hard work in all its forms. Ajay keeps jobs running smoothly and clients fully informed from start to finish.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- ===================== TESTIMONIALS ===================== -->
+  <section id="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">What Clients Say</p>
+        <h2 class="section-title">Don't just take our word for it</h2>
+        <p class="section-sub">Hear from neighbors who've worked with us. We're building our reputation one job at a time.</p>
+      </div>
+      <div class="testimonials-grid">
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">I was very pleased with the quality of their work and will not hesitate to use them again.</p>
+          <div class="testimonial-author">— Elise Morin</div>
+          <div class="testimonial-note">Window Washing</div>
+        </div>
+
+       
+      </div>
+      <div class="testimonials-cta">
+        <p>Happy with our work? We'd love a Google review — it helps other neighbors find us.</p>
+        <a href="https://business.google.com" target="_blank" class="btn-primary">Leave a Google Review</a>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- ===================== FAQ ===================== -->
+  <section id="faq">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Common Questions</p>
+        <h2 class="section-title">FAQ</h2>
+        <p class="section-sub">Have a question not answered here? Just give us a call — we're happy to chat.</p>
+      </div>
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            What areas do you serve? <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-answer"><p>We're based in Southeast Iowa and serve Henry County and surrounding areas. Not sure if we cover your location? Just call or email us and we'll let you know.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            How do I get a quote? <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-answer"><p>Quotes are always free. You can fill out the form on this page, call us at 319-528-8024 or 319-360-9185, or send an email to corefourexterior@gmail.com. We'll get back to you as quickly as possible.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            How do you charge — by the job or by the hour? <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-answer"><p>We charge by the job plus any costs for equipment, supplies, or disposal fees. We'll always explain what's included in your estimate before starting, so there are no surprises on your invoice.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            What forms of payment do you accept? <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-answer"><p>We accept cash, check, and common digital payment methods. Payment is due upon job completion. We'll confirm payment details when scheduling your service.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            What if I'm not satisfied with the work? <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-answer"><p>We never leave a job without giving you the chance to inspect our work first. If something doesn't meet your expectations, we'll address it before we pack up — no arguments, no extra charges.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Do you haul away debris and waste? <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-answer"><p>Yes — for junk removal and demolition jobs, hauling debris is part of the service. For landscaping projects, disposal fees may apply depending on the volume of material. This will be communicated in your estimate.</p></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- ===================== CONTACT / QUOTE ===================== -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Get In Touch</p>
+        <h2 class="section-title">Request a free quote</h2>
+        <p class="section-sub">Fill out the form and we'll get back to you within one business day. Quotes are always free and there's no obligation.</p>
+      </div>
+      <div class="contact-layout">
+
+        <div class="contact-info">
+          <div class="contact-info-item">
+            <div class="contact-info-icon">📞</div>
+            <div class="contact-info-text">
+              <label>Phone</label>
+              <a href="tel:3195288024">319-528-8024</a><br>
+              <a href="tel:3193609185">319-360-9185</a>
+              <div class="contact-note">If we're on a job we may not answer — leave a voicemail or text and we'll call back.</div>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon">✉️</div>
+            <div class="contact-info-text">
+              <label>Email</label>
+              <a href="mailto:corefourexterior@gmail.com">corefourexterior@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon">📍</div>
+            <div class="contact-info-text">
+              <label>Service Area</label>
+              <span>Southeast Iowa &amp; surrounding counties</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="quote-form" id="quoteForm">
+          <h3>Free Quote Request</h3>
+          <p>No obligation. We'll respond within one business day.</p>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" placeholder="Carter" />
+            </div>
+            <div class="form-group">
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" placeholder="Smith" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" placeholder="319-555-0100" />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" placeholder="you@email.com" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="service">Service Needed</label>
+            <select id="service">
+              <option value="">— Select a service —</option>
+              <option>Window Washing</option>
+              <option>Landscaping</option>
+              <option>Small Demolition</option>
+              <option>Junk Removal</option>
+              <option>Snow Removal</option>
+              <option>Multiple / Not Sure</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="city">Your City / Town</label>
+            <input type="text" id="city" placeholder="e.g. Tipton, Iowa" />
+          </div>
+          <div class="form-group">
+            <label for="message">Tell us about the job</label>
+            <textarea id="message" placeholder="Describe what you need done, approximate size of the job, any specific concerns..."></textarea>
+          </div>
+          <button class="form-submit" onclick="submitForm()">Send My Quote Request →</button>
+          <div class="form-success" id="formSuccess">
+            ✅ Thanks! We'll be in touch within one business day.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer>
+    <div class="footer-inner">
+      <div><strong>Core-Four Exterior Services</strong> — Southeast Iowa</div>
+      <div>
+        <a href="tel:3195288024">319-528-8024</a> &nbsp;|&nbsp;
+        <a href="tel:3193609185">319-360-9185</a> &nbsp;|&nbsp;
+        <a href="mailto:corefourexterior@gmail.com">corefourexterior@gmail.com</a>
+      </div>
+      <div>Window Washing · Landscaping · Small Demolition · Junk Removal</div>
+      <div style="margin-top:8px;">© 2025 Core-Four Exterior Services. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu
+    function toggleMenu() {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    }
+
+    // FAQ accordion
+    function toggleFaq(btn) {
+      const item = btn.parentElement;
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    }
+
+    // Quote form (front-end only — swap in a real backend or Formspree endpoint)
+    function submitForm() {
+      const formData = new FormData();
+      formData.append('name', document.getElementById('fname').value + ' ' + document.getElementById('lname').value);
+      formData.append('phone', document.getElementById('phone').value);
+      formData.append('email', document.getElementById('email').value);
+      formData.append('service', document.getElementById('service').value);
+      formData.append('city', document.getElementById('city').value);
+      formData.append('message', document.getElementById('message').value);
+
+      fetch('https://formspree.io/f/maqzgbkq', {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      }).then(() => {
+        document.getElementById('quoteForm').querySelector('button').style.display = 'none';
+        document.getElementById('formSuccess').style.display = 'block';
+      });
+      // To wire up real email submission, replace this block with a
+      // fetch() call to Formspree: https://formspree.io
+      // e.g. fetch('https://formspree.io/f/YOUR_ID', { method:'POST', body: formData })
+    }
+
+    // Smooth active nav highlight on scroll
+    const sections = document.querySelectorAll('section[id]');
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(s => {
+        if (window.scrollY >= s.offsetTop - 80) current = s.id;
+      });
+      document.querySelectorAll('.nav-links a').forEach(a => {
+        a.style.color = a.getAttribute('href') === '#' + current
+          ? 'var(--tan)' : '';
+      });
+    });
+  </script>
+
+</body>
+</html>
